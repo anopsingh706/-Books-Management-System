@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+
+    <link rel="stylesheet" href="library.css" />
+
+    <script src="books.js"></script>
+  </head>
+
+  <body style="background-color: blanchedalmond">
+    <div class="overlay"></div>
+
+    <div
+      style="
+        height: 70px;
+        color: aliceblue;
+        background-color: brown;
+        border-radius: 20 px;
+      "
+    >
+      <h1
+        style="
+          color: aliceblue;
+          text-align: center;
+          font-size: xxx-large;
+          font-family: Arial, Helvetica, sans-serif;
+        "
+      >
+        Library Managment System
+      </h1>
+    </div>
+    <br /><br /><br />
+    <div
+      style="
+        width: 14cm;
+        height: 9cm;
+        background-color: blueviolet;
+        margin-left: 9cm;
+        border-radius: 20px;
+        position: fixed;
+      "
+    >
+      <br /><br /><br />
+      <button id="btn" onclick="show_books(); add_data();">SHOW BOOKS</button>
+      <br /><br /><br />
+      <br /><br /><br />
+
+      <button id="btn" Onclick="showpopup()">ADD BOOK</button>
+    </div>
+
+    <div class="popup_form">
+      <br /><br />
+      <h1 style="color: azure" ;S>Enter Book Details</h1>
+      <br /><br />
+      <form id="form">
+        <label>Book Name</label>
+        <input
+          id="bookname"
+          type="text"
+          placeholder="Enter Book Name"
+          required
+        />
+        <br /><br />
+        <label>Author Name</label>
+        <input
+          id="authorname"
+          type="text"
+          placeholder="Enter Author Name"
+          required
+        />
+        <br /><br /><br /><br />
+
+        <button id="btn2" Onclick="addbook()">Submit</button>
+
+        <button id="btn2" Onclick="cancle()">Cancle</button>
+        <h4 style="margin-top: 1cm;">Created-By: Anop Singh</h4>
+
+      </form>
+
+    </div>
+
+    <div class="table">
+      <div
+        id="available_books"
+        style="height: 80px; color: aliceblue; background-color: blueviolet"
+      >
+        <span id="span" Onclick="close_span()">&times;</span>
+        <h1
+          style="
+            color: aliceblue;
+            text-align: center;
+            font-size: xxx-large;
+            font-family: Arial, Helvetica, sans-serif;
+          "
+        >
+          Available books
+        </h1>
+      </div>
+
+      <table
+        border="1"
+        id="table"
+        cellspacing="0px"
+        width="900"
+        height="100"
+        align="center"
+      >
+        <tr>
+          <th>SR.</th>
+          <th>BOOKS</th>
+          <th>AUTHOR</th>
+        </tr>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </body>
+
+</html>
